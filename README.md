@@ -16,6 +16,13 @@ $ cd ~/Sites/silverstripe-angularjs-demo
 $ composer install
 ```
 
+For convenience, front end dependencies have already been comitted.
+If new dependencies are added to bower.json then install.
+```
+$ cd ~/Sites/silverstripe-angularjs-demo/themes/simple/
+$ bower install
+```
+
 Create a DB for your CMS.
 ```
 $ mysql -u root
@@ -25,8 +32,7 @@ Update ~/mysite/_config.php db entry.
 ```
 $database = 'ssangularjs';
 ```
-Configure _ss_environment.php.
-https://docs.silverstripe.org/en/3.2/getting_started/environment_management
+Configure _ss_environment.php (https://docs.silverstripe.org/en/3.2/getting_started/environment_management).
 ```
 $ vi ~/Sites/_ss_environment.php
 ```
