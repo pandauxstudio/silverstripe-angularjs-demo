@@ -1,0 +1,20 @@
+{
+  "name": "silverstripe-angularjs-demp",
+  "version": "1.0.0",
+  "description": "SilverStripe AngularJS Demo",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.20",
+    "requirejs-plugins": "~1.0.3",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8"
+  }
+}
