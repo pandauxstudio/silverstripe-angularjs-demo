@@ -1,11 +1,3 @@
-//The build will inline common dependencies into this file.
-//For any third party dependencies, like jQuery, place them in the lib folder.
-//Configure loading modules from the lib directory,
-//except for 'app' ones, which are in a sibling
-//directory.
-
-var releaseVersion = document.getElementById("metaApplication").getAttribute("data-releaseversion");
-
 requirejs.config({
 	baseUrl: '/themes/simple/javascript/app',
 	paths: {
