@@ -1,14 +1,6 @@
-/**
- * Set of app services. \
- * Find out more about AngularJS filters here: https://docs.angularjs.org/guide/services.
- *
- * @module envmon.services
- */
-
 define('appServices', ['angular'], function(angular) {
 
 	var appServices = angular.module('app.services', []);
-
 
 	appServices.factory('AJAXService', function($http) {
 		return {
@@ -24,7 +16,6 @@ define('appServices', ['angular'], function(angular) {
 			}
 		}
 	});
-
 
 	appServices.factory('RSSService', function($http) {
 		return {

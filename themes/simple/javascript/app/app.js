@@ -1,7 +1,5 @@
 define('app', ['jquery', 'angular'], function(jquery, angular) {
 
-	/* DOM Elements */
-	
 	var app = angular.module('app', ['app.services', 'app.controllers', 'app.models', 'app.directives', 'app.filters', 'ngResource'] );
 
 	app.factory('httpInterceptor', function ($q, $rootScope, $log) {

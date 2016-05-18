@@ -1,9 +1,3 @@
-/**
- * Set of data models.
- *
- * @module envmon.models
- */
-
 define('appModels', ['angular'], function(angular) {
 	
 	var appModels = angular.module('app.models', []);
