@@ -17,6 +17,7 @@ define('appServices', ['angular'], function(angular) {
 		}
 	});
 
+	// This is not used in this demo
 	appServices.factory('RSSService', function($http) {
 		return {
 			getRSSList: function(limit) {

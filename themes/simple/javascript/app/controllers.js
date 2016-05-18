@@ -1,4 +1,4 @@
-define('appControllers', ['jquery', 'lib', 'angular', 'angularResource'], function(jquery, lib, angular) {
+define('appControllers', ['jquery', 'angular', 'angularResource'], function(jquery, angular) {
 
 	var appControllers = angular.module('app.controllers', []);
 
