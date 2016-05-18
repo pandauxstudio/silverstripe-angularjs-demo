@@ -1,11 +1,59 @@
 # About
 
-This is an example website to illustrate how Silverstripe can be used with Angular JS.
+For those wanting to experiment with AngularJS and SilverStripe, this is a very basic demo site that integrates the two great technologies.  The demo site showcases fetching data internally using ajax controllers and by calling a restful api service.
 
 # Installation
 
-To set up this example: 
+Clone the repo.
+```
+$ cd ~/Sites
+$ git clone https://github.com/pandauxstudio/silverstripe-angularjs-demo.git
+```
 
-1. Run `composer install` to set up a Silverstripe project.
-2. Create an `_ss_environment.php` file with your database settings.
-3. Run dev/build. 
+Install project dependencies.
+```
+$ cd ~/Sites/silverstripe-angularjs-demo
+$ composer install
+```
+
+Create a DB for your CMS.
+```
+$ mysql -u root
+$ create database ssangularjs;
+```
+Update ~/mysite/_config.php db entry.
+```
+$database = 'ssangularjs';
+```
+Configure _ss_environment.php.
+https://docs.silverstripe.org/en/3.2/getting_started/environment_management
+```
+$ vi ~/Sites/_ss_environment.php
+```
+Create a new host entry for your site.
+```
+127.0.0.1    ssangular.dev
+```
+```
+$ sudo vi /etc/hosts
+```
+Create a virtual host for your site.
+```
+<VirtualHost *:80>
+        DocumentRoot "/Users/zaid/Sites/silverstripe-angularjs-demo"
+        ServerName ssangularjs.dev
+        <Directory /Users/zaid/Sites/silverstripe-angularjs-demo/>
+                Options -Indexes
+                Options FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+                Require all granted
+        </Directory>
+</VirtualHost>
+```
+```
+$ sudo vi /etc/apache2/extra/httpd-vhosts.conf
+$ sudo apachectl restart
+```
+Build your site (http://ssangular.dev/dev/build).
